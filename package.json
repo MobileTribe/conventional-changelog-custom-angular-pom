@@ -1,6 +1,6 @@
 {
   "name": "conventional-changelog-custom-angular-pom",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "conventional-changelog custom angular pom preset",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/conventional-changelog/conventional-changelog-angular.git"
+    "url": "git+https://github.com/MobileTribe/conventional-changelog-custom-angular-pom.git"
   },
   "keywords": [
     "conventional-changelog",
@@ -24,9 +24,9 @@
   "author": "Leroy Merlin",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/conventional-changelog/conventional-changelog-angular/issues"
+    "url": "https://github.com/MobileTribe/conventional-changelog-custom-angular-pom/issues"
   },
-  "homepage": "https://github.com/conventional-changelog/conventional-changelog-angular#readme",
+  "homepage": "https://github.com/MobileTribe/conventional-changelog-custom-angular-pom#readme",
   "devDependencies": {
     "better-than-before": "^1.0.0",
     "chai": "^3.4.1",
