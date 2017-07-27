@@ -16,6 +16,12 @@ $ npm install -g conventional-changelog-cli conventional-changelog-custom-angula
 $ conventional-changelog -p custom-angular-pom -r 0
 ```
 
+Some commits can be ignored with the `CHANGELOG_IGNORE_BEFORE` parameter:
+
+```sh
+CHANGELOG_IGNORE_BEFORE=2017-01-01 conventional-changelog -p custom-angular-pom -r 0
+```
+
 ### Example
 
 ```xml

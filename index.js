@@ -38,6 +38,12 @@ var loadPom = Q.Promise(function(resolve, reject) {
   });
 });
 
+var ignoreBefore = process.env['CHANGELOG_IGNORE_BEFORE'];
+
+if (ignoreBefore && !/\d{4}-\d{2}-\d{2}/.test(ignoreBefore)) {
+  console.log("[WARN] the CHANGELOG_IGNORE_BEFORE parameter doesn't look like a valid date: [" + ignoreBefore + ']');
+}
+
 function issueUrl() {
   var pkg = readPkgUp.sync().pkg;
 
@@ -54,6 +60,10 @@ var writerOpts = {
   transform: function(commit) {
     var discard = true;
     var issues = [];
+
+    if (ignoreBefore && commit.committerDate < ignoreBefore) {
+      return;
+    }
 
     commit.notes.forEach(function(note) {
       note.title = 'BREAKING CHANGES';
